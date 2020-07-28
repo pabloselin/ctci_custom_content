@@ -1,0 +1,21 @@
+{
+  "name": "ctci_custom_content",
+  "version": "0.0.1",
+  "description": "Campos y contenidos para CTCI",
+  "main": "ctci_custom_content.php",
+  "scripts": {
+    "start": "wp-scripts start",
+    "build": "wp-scripts build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@wordpress/scripts": "^12.1.1"
+  },
+  "dependencies": {
+    "@wordpress/edit-post": "^3.21.3",
+    "@wordpress/i18n": "^3.14.0",
+    "@wordpress/media-utils": "^1.15.0",
+    "@wordpress/plugins": "^2.20.3"
+  }
+}
