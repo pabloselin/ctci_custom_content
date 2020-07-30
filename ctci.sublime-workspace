@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"_ctci_do",
+				"_ctci_doc_file_info"
+			],
+			[
+				"WP_DEBU",
+				"WP_DEBUG\tWP Constant"
+			],
+			[
+				"PluginSid",
+				"PluginSidebarMoreMenuItem"
+			],
+			[
 				"jepack",
 				"jetpack_photon_url"
 			],
@@ -46,10 +58,6 @@
 			[
 				"get_mime",
 				"get_post_mime_type"
-			],
-			[
-				"WP_DEBU",
-				"WP_DEBUG_DISPLAY\tWP Constant"
 			],
 			[
 				"vie",
@@ -351,6 +359,51 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 505,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/index.js",
+			"settings":
+			{
+				"buffer_size": 1954,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "alert(true)"
+			}
+		},
+		{
+			"file": "ctci_custom_content.php",
+			"settings":
+			{
+				"buffer_size": 881,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "ctci_custom_fields.php",
+			"settings":
+			{
+				"buffer_size": 2045,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/pabloselin/Documents/WebDev/local_sites/ctcidocs/app/public/wp-config.php",
+			"settings":
+			{
+				"buffer_size": 2901,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -363,6 +416,18 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"synjsx",
+				"Set Syntax: JSX"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
 			[
 				"synbla",
 				"Set Syntax: Laravel Blade"
@@ -390,10 +455,6 @@
 			[
 				"terminus",
 				"Preferences: Terminus Settings"
-			],
-			[
-				"rein",
-				"Indentation: Reindent Lines"
 			],
 			[
 				"comm",
@@ -430,10 +491,6 @@
 			[
 				"xdebug",
 				"Preferences: Xdebug Settings – User"
-			],
-			[
-				"instal",
-				"Package Control: Install Package"
 			],
 			[
 				"com",
@@ -560,10 +617,12 @@
 	},
 	"expanded_folders":
 	[
-		"/home/pabloselin/Documents/WebDev/local_sites/ctcidocs/app/public/wp-content/plugins/ctci_custom_content"
+		"/home/pabloselin/Documents/WebDev/local_sites/ctcidocs/app/public/wp-content/plugins/ctci_custom_content",
+		"/home/pabloselin/Documents/WebDev/local_sites/ctcidocs/app/public/wp-content/themes/ctci"
 	],
 	"file_history":
 	[
+		"/home/pabloselin/Documents/WebDev/local_sites/ctcidocs/app/public/wp-content/debug.log",
 		"/home/pabloselin/Documents/WebDev/local_sites/cnid/app/public/wp-content/themes/cnid-sage/ctcidoc.sublime-project",
 		"/home/pabloselin/Documents/WebDev/local_sites/bitacora/app/public/wp-content/themes/prompt/functions.php",
 		"/home/pabloselin/Documents/WebDev/local_sites/bitacora/app/public/wp-content/debug.log",
@@ -690,8 +749,7 @@
 		"/home/pabloselin/Documents/WebDev/local_sites/bitacora/app/public/wp-content/themes/prompt/dploy.yaml",
 		"/home/pabloselin/.config/Local/run/router/nginx/logs/error.log",
 		"/home/pabloselin/.gitignore",
-		"/home/pabloselin/Documents/WebDev/local_sites/bitacora/app/public/wp-content/plugins/bit_extensions/dploy.yaml",
-		"/home/pabloselin/Documents/WebDev/local_sites/bitacora/app/public/wp-content/themes/prompt/node_modules/bootstrap/scss/_buttons.scss"
+		"/home/pabloselin/Documents/WebDev/local_sites/bitacora/app/public/wp-content/plugins/bit_extensions/dploy.yaml"
 	],
 	"find":
 	{
@@ -726,8 +784,153 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 505,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								330,
+								330
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1954,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1379,
+								1379
+							]
+						],
+						"settings":
+						{
+							"auto_name": "alert(true)",
+							"syntax": "Packages/JSX/JSX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "ctci_custom_content.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 881,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								806,
+								806
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "ctci_custom_fields.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2045,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								441,
+								441
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/home/pabloselin/Documents/WebDev/local_sites/ctcidocs/app/public/wp-config.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2901,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1077,
+								1077
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 255.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
 			]
 		}
 	],

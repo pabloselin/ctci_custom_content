@@ -1,6 +1,11 @@
 import { registerPlugin } from "@wordpress/plugins";
 import { PluginSidebar, PluginSidebarMoreMenuItem } from "@wordpress/edit-post";
-import { PanelBody, TextControl, FormFileUpload } from "@wordpress/components";
+import {
+	PanelBody,
+	TextControl,
+	FormFileUpload,
+	SelectControl,
+} from "@wordpress/components";
 import { __ } from "@wordpress/i18n";
 import { select, withSelect, withDispatch } from "@wordpress/data";
 import { uploadMedia } from "@wordpress/media-utils";
@@ -13,15 +18,21 @@ let handleUpload = (files) => {
 		onError: console.error,
 	});
 
-	//Asignar el campo personalizado para el archivo
-
 	//Mostrar el campo personalizado en la interfaz
+};
 
-	//Procesar el markdown para pasarlo a texto plano
+let handleOption = (value, field) => {
+	console.log(value, field);
+};
+
+let handleTextField = (value, field) => {
+	console.log(value, field);
 };
 
 let assignFileField = (files) => {
+	//Asignar el campo personalizado para el archivo
 	console.log(files);
+	//Procesar el markdown para pasarlo a texto plano
 };
 
 let DocMetaFields = (props) => {
@@ -37,11 +48,48 @@ let DocMetaFields = (props) => {
 					onChange={() => handleUpload(event.target.files)}
 					icon="insert"
 				>
-					{__("Subir archivo", "ctci")}
+					{__("Subir archivo PDF", "ctci")}
 				</FormFileUpload>
+
+				<FormFileUpload
+					accept=".md"
+					onChange={() => handleUpload(event.target.files)}
+					icon="insert"
+				>
+					{__("Subir archivo Markdown o TXT", "ctci")}
+				</FormFileUpload>
+
 				<TextControl
-					value={props.text_metafield}
-					label={__("Documento", "ctci")}
+					label={__("Año de publicación")}
+					value={props._ctci_doc_year}
+					type="number"
+					name="_ctci_doc_year"
+					onChange={() =>
+						handleTextField(event.target.value, event.target.name)
+					}
+				/>
+				<SelectControl
+					label={__("Mes de publicación")}
+					value={props._ctci_doc_month}
+					name="_ctci_doc_month"
+					options={[
+						{ value: null, label: "Escoge un mes", disabled: true },
+						{ value: "01", label: "Enero" },
+						{ value: "02", label: "Febrero" },
+						{ value: "03", label: "Marzo" },
+						{ value: "04", label: "Abril" },
+						{ value: "05", label: "Mayo" },
+						{ value: "06", label: "Junio" },
+						{ value: "07", label: "Julio" },
+						{ value: "08", label: "Agosto" },
+						{ value: "09", label: "Septiembre" },
+						{ value: "10", label: "Octubre" },
+						{ value: "11", label: "Noviembre" },
+						{ value: "12", label: "Diciembre" },
+					]}
+					onChange={() =>
+						handleOption(event.target.value, event.target.name)
+					}
 				/>
 			</PanelBody>
 		</>

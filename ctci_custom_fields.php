@@ -8,7 +8,8 @@ function ctci_register_meta() {
 	$text_fields = array(
 		'_ctci_doc_file_info',
 		'_ctci_doc_author',
-		'_ctci_doc_extension'
+		'_ctci_doc_extension',
+		'_ctci_doc_year'
 	);
 
 	foreach($text_fields as $text_field) {

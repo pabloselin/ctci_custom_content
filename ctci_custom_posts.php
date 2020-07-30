@@ -42,7 +42,7 @@ function ctci_docs_post_type() {
 		'label'                 => __( 'Documento', 'ctci' ),
 		'description'           => __( 'Recurso de la plataforma documental', 'ctci' ),
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor', 'thumbnail', 'revisions', 'custom-fields' ),
+		'supports'              => array( 'title', 'editor', 'thumbnail', 'revisions', 'custom-fields', 'excerpt' ),
 		'taxonomies'            => array( 'post_tag' ),
 		'hierarchical'          => false,
 		'public'                => true,
