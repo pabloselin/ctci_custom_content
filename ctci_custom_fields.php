@@ -7,10 +7,13 @@ function ctci_register_meta() {
 	
 	$text_fields = array(
 		'_ctci_doc_file_info',
+		'_ctci_doc_file_md',
 		'_ctci_doc_author',
 		'_ctci_doc_extension',
-		'_ctci_doc_year'
+		'_ctci_doc_year',
+		'_ctci_doc_month',
 	);
+
 
 	foreach($text_fields as $text_field) {
 		register_meta('post', $text_field, array(
@@ -22,6 +25,24 @@ function ctci_register_meta() {
 				return current_user_can('edit_posts');
 			}
 		));	
+	}
+
+
+	$number_fields = array(
+		'_ctci_doc_file_pdf_id',
+		'_ctci_doc_file_md_id',
+	);
+
+	foreach($number_fields as $number_field) {
+		register_meta('post', $number_field, array(
+			'show_in_rest' 		=> true,
+			'type'				=> 'integer',
+			'single'			=> true,
+			'sanitize_callback'	=> 'sanitize_text_field',
+			'auth_callback'		=> function() {
+				return current_user_can('edit_posts');
+			}
+		));
 	}
 	
 }

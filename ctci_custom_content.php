@@ -29,7 +29,7 @@ function ctci_enqueue_assets() {
 	wp_enqueue_script(
 		'ctci-gutenberg-sidebar', 
 		plugins_url( 'build/index.js', __FILE__ ),
-		array( 'wp-plugins', 'wp-edit-post', 'wp-i18n', 'wp-element', 'wp-components', 'wp-data', 'wp-media-utils' )
+		array( 'wp-plugins', 'wp-edit-post', 'wp-i18n', 'wp-element', 'wp-components', 'wp-data', 'wp-media-utils', 'wp-compose' )
 	);
 }
 
