@@ -12,6 +12,8 @@ function ctci_register_meta() {
 		'_ctci_doc_extension',
 		'_ctci_doc_year',
 		'_ctci_doc_month',
+		'_ctci_doc_file_pdf_slug',
+		'_ctci_doc_file_md_slug'
 	);
 
 

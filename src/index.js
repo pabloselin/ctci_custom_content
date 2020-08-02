@@ -1,15 +1,13 @@
 import { registerPlugin } from "@wordpress/plugins";
 import { PluginSidebar, PluginSidebarMoreMenuItem } from "@wordpress/edit-post";
-import { PanelBody } from "@wordpress/components";
+import { PanelBody, HorizontalRule } from "@wordpress/components";
 import { __ } from "@wordpress/i18n";
 import { select, withSelect, withDispatch } from "@wordpress/data";
 import { compose } from "@wordpress/compose";
 
 import YearField from "./fields/YearField.js";
-import PdfFileUpload from "./fields/PdfFileUpload.js";
-import MdFileUpload from "./fields/MdFileUpload.js";
+import FileUpload from "./fields/PdfFileUpload.js";
 import MonthField from "./fields/MonthField.js";
-import InfoFile from "./fields/InfoFile.js";
 
 let DocMetaFields = (props) => {
 	return (
@@ -19,11 +17,17 @@ let DocMetaFields = (props) => {
 				icon="media-document"
 				initialOpen={true}
 			>
-				<PdfFileUpload />
-				<InfoFile field="_ctci_doc_file_pdf_id" />
-				<MdFileUpload />
-				<InfoFile field="_ctci_doc_file_md_id" />
+				<FileUpload field="_ctci_doc_file_pdf_slug" accept=".pdf">
+					Subir PDF
+				</FileUpload>
+				<HorizontalRule />
+				<FileUpload field="_ctci_doc_file_md_slug" accept=".md">
+					Subir Markdown o .txt
+				</FileUpload>
+				<HorizontalRule />
 				<YearField />
+				<HorizontalRule />
+
 				<MonthField />
 			</PanelBody>
 		</>

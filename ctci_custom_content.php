@@ -34,3 +34,12 @@ function ctci_enqueue_assets() {
 }
 
 add_action( 'enqueue_block_editor_assets', 'ctci_enqueue_assets' );
+
+add_filter( 'upload_mimes', 'ctci_myme_types', 1, 1 );
+
+function ctci_myme_types( $mime_types ) {
+  $mime_types['md'] = 'text/plain';     // Adding .svg extension
+  $mime_types['txt'] = 'text/plain'; // Adding .json extension
+  
+  return $mime_types;
+}

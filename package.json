@@ -16,6 +16,7 @@
     "@wordpress/edit-post": "^3.21.3",
     "@wordpress/i18n": "^3.14.0",
     "@wordpress/media-utils": "^1.15.0",
-    "@wordpress/plugins": "^2.20.3"
+    "@wordpress/plugins": "^2.20.3",
+    "@wordpress/url": "^2.17.0"
   }
 }

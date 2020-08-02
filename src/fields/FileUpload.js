@@ -13,7 +13,9 @@ import { compose } from "@wordpress/compose";
 //import InfoFile from "./fields/InfoFile.js";
 import { __ } from "@wordpress/i18n";
 
-let FormFieldPdf = (props) => {
+let fileReader;
+
+const FormFieldPdf = (props) => {
 	return (
 		<>
 			{props.doc_info !== null && props.doc_file_slug ? (
@@ -31,7 +33,7 @@ let FormFieldPdf = (props) => {
 			<FormFileUpload
 				accept={props.accept}
 				onChange={() =>
-					props.putFileandField(event.target.files, props.field)
+					props.putFileandField(event.target.files[0], props.field)
 				}
 				icon="insert"
 			>
@@ -55,6 +57,22 @@ const applyWithSelect = withSelect((select, ownProps) => {
 });
 
 const applyWithDispatch = withDispatch((dispatch, ownProps) => {
+	// console.log(ownProps);
+	// if (ownProps.field === "_ctci_doc_file_md_slug") {
+	// 	//Asignar el campo personalizado para el archivo
+	// 	// console.log(files);
+	// 	// if (
+	// 	// 	fieldname === "_ctci_doc_file_md_slug" &&
+	// 	// 	files.url.startsWith("blob")
+	// 	// ) {
+	// 	// 	console.log(files.url);
+	// 	// 	fileReader = new FileReader();
+	// 	// 	fileReader.onloadend = handleFileRead;
+	// 	// 	fileReader.readAsText(files);
+	// 	// }
+	// 	console.log("process markdown");
+	// }
+
 	return {
 		putFileandField: (files, field) => {
 			handleUpload(files, field);

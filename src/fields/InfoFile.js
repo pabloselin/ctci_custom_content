@@ -2,10 +2,10 @@ import { Card, CardBody } from "@wordpress/components";
 import { select } from "@wordpress/data";
 
 let handleFileName = (fieldProp) => {
-	let field = wp.data.select("core/editor").getEditedPostAttribute("meta")[
+	let id = wp.data.select("core/editor").getEditedPostAttribute("meta")[
 		fieldProp
 	];
-	return field;
+	return id;
 };
 
 let InfoFile = (props) => {
