@@ -1,11 +1,11 @@
 <?php
 
 // CTCI Registered custom fields for wp data module
+function ctci_return_doc_fields() {
 
+	$fields = array();
 
-function ctci_register_meta() {
-	
-	$text_fields = array(
+	$fields['text_fields'] = array(
 		'_ctci_doc_file_info',
 		'_ctci_doc_file_md',
 		'_ctci_doc_author',
@@ -16,8 +16,22 @@ function ctci_register_meta() {
 		'_ctci_doc_file_md_slug'
 	);
 
+	$fields['number_fields'] = array(
+		'_ctci_doc_file_pdf_id',
+		'_ctci_doc_file_md_id',
+	);
 
-	foreach($text_fields as $text_field) {
+	return $fields;
+}
+
+
+
+function ctci_register_meta() {
+	
+	$fields = ctci_return_doc_fields();
+
+
+	foreach($fields['text_fields'] as $text_field) {
 		register_meta('post', $text_field, array(
 			'show_in_rest' 		=> true,
 			'type'		   		=> 'string',
@@ -29,13 +43,7 @@ function ctci_register_meta() {
 		));	
 	}
 
-
-	$number_fields = array(
-		'_ctci_doc_file_pdf_id',
-		'_ctci_doc_file_md_id',
-	);
-
-	foreach($number_fields as $number_field) {
+	foreach($fields['number_fields'] as $number_field) {
 		register_meta('post', $number_field, array(
 			'show_in_rest' 		=> true,
 			'type'				=> 'integer',
@@ -109,5 +117,25 @@ function ctci_process_text($meta_id, $object_id, $meta_key = '', $meta_value = '
 	}
 
 	update_post_meta( $object_id, '_ctci_archivo_content', $meta_value );
+
+}
+
+function ctci_return_fields($docid) {
+
+	$fields = ctci_return_fields();
+	$fieldsvalues = array();
+
+	foreach($fields as $field) {
+		$fieldsvalues[substr($field, 5)] = get_post_meta($docid, $field, true);
+	}
+
+	if(count($fieldsvalues) > 0) {
+		return $fieldsvalues;
+	} else {
+		return false;
+	}
+}
+
+function ctci_output_fields($docid) {
 
 }
