@@ -13,7 +13,8 @@ function ctci_return_doc_fields() {
 		'_ctci_doc_month',
 		'_ctci_doc_file_pdf_slug',
 		'_ctci_doc_file_md_slug',
-		'_ctci_doc_text_contents'
+		'_ctci_doc_text_contents',
+		'_ctci_doc_day'
 	);
 
 	$fields['number_fields'] = array(
