@@ -8,6 +8,7 @@ import { compose } from "@wordpress/compose";
 import YearField from "./fields/YearField.js";
 import FileUpload from "./fields/PdfFileUpload.js";
 import MonthField from "./fields/MonthField.js";
+import DayField from "./fields/DayField.js";
 
 let DocMetaFields = (props) => {
 	return (
@@ -21,14 +22,18 @@ let DocMetaFields = (props) => {
 					Subir PDF
 				</FileUpload>
 				<HorizontalRule />
-				<FileUpload field="_ctci_doc_file_md_slug" accept=".md">
+				<FileUpload
+					field="_ctci_doc_file_md_slug"
+					accept=".md"
+					contentsField="_ctci_doc_text_contents"
+				>
 					Subir Markdown o .txt
 				</FileUpload>
 				<HorizontalRule />
 				<YearField />
 				<HorizontalRule />
-
 				<MonthField />
+				<DayField />
 			</PanelBody>
 		</>
 	);

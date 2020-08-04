@@ -8,12 +8,12 @@ function ctci_return_doc_fields() {
 	$fields['text_fields'] = array(
 		'_ctci_doc_file_info',
 		'_ctci_doc_file_md',
-		'_ctci_doc_author',
 		'_ctci_doc_extension',
 		'_ctci_doc_year',
 		'_ctci_doc_month',
 		'_ctci_doc_file_pdf_slug',
-		'_ctci_doc_file_md_slug'
+		'_ctci_doc_file_md_slug',
+		'_ctci_doc_text_contents'
 	);
 
 	$fields['number_fields'] = array(

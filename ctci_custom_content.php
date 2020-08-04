@@ -23,6 +23,10 @@ include( plugin_dir_path( __FILE__ ) . '/ctci_custom_posts.php' );
 
 include( plugin_dir_path( __FILE__ ) . '/ctci_custom_fields.php' );
 
+// Custom taxonomies
+
+include( plugin_dir_path( __FILE__ ) . '/ctci_custom_taxonomies.php' );
+
 // Gutenberg stuff
 
 function ctci_enqueue_assets() {

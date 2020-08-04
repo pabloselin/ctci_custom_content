@@ -1,12 +1,32 @@
 import { uploadMedia } from "@wordpress/media-utils";
 import { select, withSelect, withDispatch } from "@wordpress/data";
+import { getBlobByURL } from "@wordpress/blob";
+
+let fileReader;
+let url;
 
 const handleFileRead = (e) => {
 	const content = fileReader.result;
-	console.log(content);
+	let textContent = {};
+	textContent["_ctci_doc_text_contents"] = content;
+	wp.data.dispatch("core/editor").editPost({ meta: textContent });
+	wp.data
+		.dispatch("core/notices")
+		.createNotice("success", "Contenido textual procesado", {
+			isDismissable: true,
+		});
 };
 
 const assignFileField = (files, fieldname) => {
+	if (
+		fieldname === "_ctci_doc_file_md_slug" &&
+		files.url.startsWith("blob")
+	) {
+		url = getBlobByURL(files.url);
+		fileReader = new FileReader();
+		fileReader.onloadend = handleFileRead;
+		fileReader.readAsText(url);
+	}
 	if (files && files.id) {
 		console.log(files);
 		let fieldData = {};
