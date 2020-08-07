@@ -58,11 +58,11 @@ function ctci_register_meta() {
 	
 }
 
-//add_action( 'init', 'ctci_register_meta' );
+add_action( 'init', 'ctci_register_meta' );
 
 
 // CTCI Custom fields
-add_action( 'cmb2_init', 'ctci_cmb2_add_metabox' );
+//add_action( 'cmb2_init', 'ctci_cmb2_add_metabox' );
 
 function ctci_cmb2_add_metabox() {
 
