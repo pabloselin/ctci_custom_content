@@ -138,5 +138,28 @@ function ctci_return_fields($docid) {
 }
 
 function ctci_output_fields($docid) {
+	$fields = array(
+		'_ctci_doc_file_info',
+		'_ctci_doc_extension',
+		'_ctci_doc_year',
+		'_ctci_doc_month',
+		'_ctci_doc_file_pdf_slug',
+		'_ctci_doc_file_md_slug',
+		'_ctci_doc_text_contents',
+		'_ctci_doc_day'
+	);
 
+	$fieldcontent = array();
+
+
+
+	foreach($fields as $field) {
+		$fieldcontent[substr($field, 6)] = get_post_meta($docid, $field, true); 
+		if($field == '_ctci_doc_file_pdf_slug') {
+			$attch = get_page_by_path( get_post_meta($docid, $field, true), OBJECT, 'ctci_doc');
+			$fieldcontent['pdfurl'] = wp_get_attachment_url( $attch->ID );
+		}
+	}
+
+	return $fieldcontent;
 }
