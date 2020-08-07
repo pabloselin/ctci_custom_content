@@ -58,7 +58,7 @@ function ctci_register_meta() {
 	
 }
 
-add_action( 'init', 'ctci_register_meta' );
+//add_action( 'init', 'ctci_register_meta' );
 
 
 // CTCI Custom fields
