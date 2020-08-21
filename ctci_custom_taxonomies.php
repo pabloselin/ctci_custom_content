@@ -44,7 +44,8 @@ function ctci_doctype() {
 	register_taxonomy( 'doctype', array( 'ctci_doc' ), $args );
 
 }
-//add_action( 'init', 'ctci_doctype', 0 );
+
+add_action( 'init', 'ctci_doctype', 0 );
 
 // Register Custom Taxonomy
 function ctci_docauthor() {
