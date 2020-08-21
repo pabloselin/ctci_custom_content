@@ -4,9 +4,9 @@
 function ctci_doctype() {
 
 	$labels = array(
-		'name'                       => _x( 'Tipos de información', 'Taxonomy General Name', 'ctci' ),
-		'singular_name'              => _x( 'Tipo de información', 'Taxonomy Singular Name', 'ctci' ),
-		'menu_name'                  => __( 'Tipos de Información', 'ctci' ),
+		'name'                       => _x( 'Tipos de Documento', 'Tipo de Documento', 'ctci' ),
+		'singular_name'              => _x( 'Tipo de Documento', 'Tipo de Documento', 'ctci' ),
+		'menu_name'                  => __( 'Tipos de Documento', 'ctci' ),
 		'all_items'                  => __( 'Todos los tipos', 'ctci' ),
 		'parent_item'                => __( 'Tipo superior', 'ctci' ),
 		'parent_item_colon'          => __( 'Tipo superior:', 'ctci' ),
