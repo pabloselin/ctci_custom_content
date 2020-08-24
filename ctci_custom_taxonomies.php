@@ -91,7 +91,8 @@ function ctci_docauthor() {
 	register_taxonomy( 'docauthor', array( 'ctci_doc' ), $args );
 
 }
-//add_action( 'init', 'ctci_docauthor', 0 );
+
+add_action( 'init', 'ctci_docauthor', 0 );
 
 // Register Custom Taxonomy
 function ctci_docarea() {

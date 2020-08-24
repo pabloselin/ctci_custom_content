@@ -48,11 +48,11 @@ registerPlugin("ctci-sidebar", {
 			return (
 				<>
 					<PluginSidebarMoreMenuItem target="ctci_docs_sidebar">
-						{__("Información documento", "ctci")}
+						{__("Subir archivo", "ctci")}
 					</PluginSidebarMoreMenuItem>
 					<PluginSidebar
 						name="ctci_docs_sidebar"
-						title={__("Información del Documento", "ctci")}
+						title={__("Subir archivo", "ctci")}
 					>
 						<DocMetaFields />
 					</PluginSidebar>
