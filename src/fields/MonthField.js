@@ -30,6 +30,7 @@ let MonthField = (props) => {
 				name="_ctci_doc_month"
 				options={[
 					{ value: null, label: "Escoge un mes", disabled: true },
+					{ value: "", label: "Ninguno" },
 					{ value: "01", label: "Enero" },
 					{ value: "02", label: "Febrero" },
 					{ value: "03", label: "Marzo" },
