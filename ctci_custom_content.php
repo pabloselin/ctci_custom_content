@@ -5,14 +5,14 @@
  * Plugin URI: https://apie.cl
  * Author: A Pie
  * Author URI: https://apie.cl
- * Version: 0.1
+ * Version: 0.3
  * License: GPL2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: cnid
  */
 
 defined( 'ABSPATH' ) || exit;
-
+define('CTCI_ADMIN_VERSION', '0.3');
 // Custom Taxonomies
 
 // Custom posts
@@ -34,7 +34,7 @@ function ctci_enqueue_assets() {
 		'ctci-gutenberg-sidebar', 
 		plugins_url( 'build/index.js', __FILE__ ),
 		array( 'wp-plugins', 'wp-edit-post', 'wp-i18n', 'wp-element', 'wp-components', 'wp-data', 'wp-media-utils', 'wp-compose' )
-	);
+	, CTCI_ADMIN_VERSION);
 }
 
 add_action( 'enqueue_block_editor_assets', 'ctci_enqueue_assets' );
