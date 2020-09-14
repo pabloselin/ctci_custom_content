@@ -47,3 +47,12 @@ function ctci_myme_types( $mime_types ) {
   
   return $mime_types;
 }
+
+add_action('imagick_load_after_read', function (object $image, string $filename, string $file_extension, string $mime_type) {
+    if ('pdf' === $file_extension) {
+        if ($image->getImageAlphaChannel()) {
+            $image->setImageAlphaChannel(Imagick::ALPHACHANNEL_REMOVE);
+            $image->setImageBackgroundColor('#ffffff');
+        }
+    }
+}, 10, 4);
