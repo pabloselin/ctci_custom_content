@@ -28,10 +28,10 @@ const assignFileField = (files, fieldname) => {
 		fileReader.readAsText(url);
 	}
 	if (files && files.id) {
-		console.log(files);
 		let fieldData = {};
 		fieldData[fieldname] = files.slug;
 		wp.data.select("core/editor").getEditedPostAttribute("meta");
+		console.log(fieldData);
 		wp.data.dispatch("core/editor").editPost({ meta: fieldData });
 		wp.data
 			.dispatch("core/notices")
@@ -52,6 +52,7 @@ const displayError = (error) => {
 
 export default (files, fieldname) => {
 	//Subir el archivo //Mostrar indicador de progreso
+	
 	uploadMedia({
 		filesList: files,
 		onFileChange: ([fileObj]) => assignFileField(fileObj, fieldname),

@@ -163,3 +163,9 @@ function ctci_output_fields($docid) {
 
 	return $fieldcontent;
 }
+
+function ctci_get_attached_doc_id( $docid ) {
+	$attch = get_page_by_path( get_post_meta($docid, '_ctci_doc_file_pdf_slug', true), OBJECT, 'ctci_doc');
+
+	return $attch->ID;
+}
