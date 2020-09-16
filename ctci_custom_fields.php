@@ -156,16 +156,20 @@ function ctci_output_fields($docid) {
 	foreach($fields as $field) {
 		$fieldcontent[substr($field, 6)] = get_post_meta($docid, $field, true); 
 		if($field == '_ctci_doc_file_pdf_slug') {
-			$attch = get_page_by_path( get_post_meta($docid, $field, true), OBJECT, 'ctci_doc');
-			$fieldcontent['pdfurl'] = wp_get_attachment_url( $attch->ID );
+			$filedata = get_post_meta($docid, $field, true);
+			//var_dump($filedata);
+			$attch = get_page_by_path( $filedata, OBJECT, 'attachment');
+			if($attch) {
+				$fieldcontent['pdfurl'] = wp_get_attachment_url( $attch->ID );	
+			}
+			
 		}
 	}
-
 	return $fieldcontent;
 }
 
 function ctci_get_attached_doc_id( $docid ) {
-	$attch = get_page_by_path( get_post_meta($docid, '_ctci_doc_file_pdf_slug', true), OBJECT, 'ctci_doc');
+	$attch = get_page_by_path( get_post_meta($docid, '_ctci_doc_file_pdf_slug', true), OBJECT, 'attachment');
 
 	return $attch->ID;
 }
